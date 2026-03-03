@@ -1,0 +1,200 @@
+.budgets-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.budgets-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.section-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.section-title h2 {
+    font-size: 1.25rem;
+    margin: 0;
+    color: var(--color-text-main);
+}
+
+.text-primary {
+    color: var(--color-primary);
+}
+
+.text-secondary {
+    color: var(--color-secondary);
+}
+
+.btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+}
+
+/* Budgets List */
+.budgets-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.budget-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.budget-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95rem;
+}
+
+.budget-category {
+    font-weight: 600;
+    color: var(--color-text-main);
+}
+
+.budget-amounts {
+    color: var(--color-text-muted);
+}
+
+.budget-amounts b {
+    color: var(--color-text-main);
+}
+
+.progress-fill.success {
+    background-color: var(--color-success);
+}
+
+.progress-fill.danger {
+    background-color: var(--color-danger);
+}
+
+.budget-status {
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-top: 0.25rem;
+}
+
+/* Goals List */
+.goals-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.goal-card {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    border-radius: var(--border-radius-md);
+}
+
+.goal-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.goal-header h3 {
+    font-size: 1.1rem;
+    color: var(--color-text-main);
+    text-align: center;
+    flex: 1;
+}
+
+.goal-stats {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--color-border);
+    padding-top: 1rem;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.stat.text-right {
+    text-align: right;
+}
+
+.stat .label {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.stat .value {
+    font-weight: 600;
+    color: var(--color-text-main);
+}
+
+/* Simple CSS Circle Progress */
+.circle-wrap {
+    width: 100px;
+    height: 100px;
+    background: var(--color-bg);
+    border-radius: 50%;
+}
+
+.circle-wrap .circle .mask,
+.circle-wrap .circle .fill {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.circle-wrap .circle .mask {
+    clip: rect(0px, 100px, 100px, 50px);
+}
+
+.circle-wrap .inside-circle {
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    background: white;
+    line-height: 84px;
+    text-align: center;
+    margin-top: 8px;
+    margin-left: 8px;
+    position: absolute;
+    z-index: 100;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    box-shadow: inset var(--shadow-sm);
+}
+
+@media (max-width: 1024px) {
+    .budgets-grid {
+        grid-template-columns: 1fr;
+    }
+}

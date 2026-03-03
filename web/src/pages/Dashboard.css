@@ -1,0 +1,251 @@
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.page-title {
+    font-size: 1.8rem;
+    color: var(--color-text-main);
+    margin-bottom: 0.25rem;
+}
+
+.page-subtitle {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+}
+
+.dashboard-filters {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius-lg);
+    gap: 1rem;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.filter-icon {
+    color: var(--color-text-muted);
+}
+
+.divider {
+    width: 1px;
+    height: 24px;
+    background-color: var(--color-border);
+}
+
+.select-base {
+    background: transparent;
+    border: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-text-main);
+    outline: none;
+    cursor: pointer;
+    padding: 0.25rem;
+    font-family: inherit;
+}
+
+.select-base:focus {
+    color: var(--color-primary);
+}
+
+/* Summary Cards */
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.summary-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+}
+
+.summary-card .card-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-shrink: 0;
+}
+
+.income-card .card-icon {
+    background: linear-gradient(135deg, #10B981, #059669);
+}
+
+.expense-card .card-icon {
+    background: linear-gradient(135deg, #EF4444, #DC2626);
+}
+
+.balance-card .card-icon {
+    background: linear-gradient(135deg, #4F46E5, #4338CA);
+}
+
+.savings-card .card-icon {
+    background: linear-gradient(135deg, #F59E0B, #D97706);
+}
+
+.card-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.card-details h3 {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.card-details .amount {
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    margin-bottom: 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.text-success {
+    color: var(--color-success) !important;
+}
+
+.text-danger {
+    color: var(--color-danger) !important;
+}
+
+/* Progress bar for savings */
+.progress-bar-container {
+    width: 100%;
+    height: 6px;
+    background-color: var(--color-border);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: 0.5rem;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+    border-radius: 3px;
+    transition: width 0.8s ease-in-out;
+}
+
+/* Charts Grid */
+.charts-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 1.5rem;
+}
+
+.chart-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.card-header h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text-main);
+}
+
+.chart-period-label {
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--color-primary);
+    background: rgba(79, 70, 229, 0.1);
+    padding: 0.2rem 0.65rem;
+    border-radius: 9999px;
+}
+
+.empty-chart {
+    flex: 1;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    background: var(--color-bg);
+    border-radius: var(--border-radius-md);
+    border: 1px dashed var(--color-border);
+}
+
+/* Pie Legend */
+.pie-legend {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--color-border);
+    margin-top: 0.5rem;
+    max-height: 160px;
+    overflow-y: auto;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.legend-amount {
+    margin-left: auto;
+    font-weight: 600;
+    color: var(--color-text-main);
+}
+
+@media (max-width: 1100px) {
+    .charts-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header {
+        flex-direction: column;
+    }
+
+    .dashboard-filters {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
