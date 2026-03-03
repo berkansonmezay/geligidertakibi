@@ -1,0 +1,10 @@
+{
+    "name": "aile-butcesi-root",
+    "private": true,
+    "scripts": {
+        "web-install": "cd web && npm install",
+        "web-build": "cd web && npm run build",
+        "api-install": "cd api && npm install",
+        "build": "cd web && npm install && npm run build"
+    }
+}
